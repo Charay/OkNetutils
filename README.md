@@ -29,6 +29,7 @@
 
 	implementation 'com.github.Charay:OkNetutils:1.2'
 
+注意：可能会有support包冲突的异常，解决方法在文档最后
 
 ## **初始化** ##
 和okhttp-utils初始化一样：
@@ -71,5 +72,26 @@
 	**OkNetUtils.executeMultiUploadRequest(...)**
  
 ![](https://i.imgur.com/EUpnjd4.png)
+
+support冲突异常：
+
+	Error:FAILURE: Build failed with an exception.
+
+	* What went wrong:
+	Execution failed for task ':app:preDebugAndroidTestBuild'.
+	> Conflict with dependency 'com.android.support:support-annotations' in project ':app'. Resolved versions for app (26.1.0) and test app (27.1.1) differ. See https://d.android.com/r/tools/test-apk-dependency-conflicts.html for details.
+	
+	* Try:
+	Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+	
+	* Get more help at https://help.gradle.org
+	
+	BUILD FAILED in 1s
+解决方法：
+在module的gradle中与dependences{}同级加入：
+
+	configurations.all {
+	    resolutionStrategy.force 'com.android.support:support-annotations:27.1.1'
+	}
 
 
