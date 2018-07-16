@@ -23,13 +23,12 @@ public class OkNetUtils {
      * @param params         加密后的参数 map形式
      * @param stringCallback String类型的回调
      */
-    public static void executeNetRequest(String url, Map<String, String> params, Object obj, StringCallback stringCallback) {
+    public static void executeNetRequest(String url, Map<String, String> params,StringCallback stringCallback) {
         OkHttpUtils
                 .post()
                 .addHeader("Connection", "close")
                 .url(url)
                 .params(params)
-                .tag(obj)
                 .build()
                 .connTimeOut(10000)
                 .readTimeOut(20000)
