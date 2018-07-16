@@ -46,7 +46,8 @@ public class OkNetUtils {
      * @param fileList          文件列表
      * @param stringCallback 回调callback
      */
-    public static void executeMultiUploadRequest(String url, Map<String, String> params, String fileKey, List<File> fileList, StringCallback stringCallback) {
+    public static void executeMultiUploadRequest(String url, Map<String, String> params, String fileKey,
+                                                 List<File> fileList, StringCallback stringCallback) {
 
         PostFormBuilder builder = OkHttpUtils
                 .post()
