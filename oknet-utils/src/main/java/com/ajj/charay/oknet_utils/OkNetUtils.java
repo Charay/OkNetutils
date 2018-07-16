@@ -44,16 +44,16 @@ public class OkNetUtils {
      * @param url            url地址
      * @param params         普通参数
      * @param fileKey        文件key
-     * @param mlist          文件列表
+     * @param fileList          文件列表
      * @param stringCallback 回调callback
      */
-    public static void executeMultiUploadRequest(String url, Map<String, String> params, String fileKey, List<File> mlist, StringCallback stringCallback) {
+    public static void executeMultiUploadRequest(String url, Map<String, String> params, String fileKey, List<File> fileList, StringCallback stringCallback) {
 
         PostFormBuilder builder = OkHttpUtils
                 .post()
                 .url(url)
                 .params(params);
-        for (File file : mlist) {
+        for (File file : fileList) {
             builder.addFile(fileKey, file.getName(), file);
         }
         RequestCall build = builder.build();
