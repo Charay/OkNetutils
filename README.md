@@ -27,7 +27,7 @@
 
 在module的gradle中添加：
 
-	implementation 'com.github.Charay:OkNetutils:1.1'
+	implementation 'com.github.Charay:OkNetutils:1.2'
 
 
 ## **初始化** ##
