@@ -89,6 +89,7 @@ support冲突异常：
 	BUILD FAILED in 1s
 解决方法：
 在module的gradle中与dependences{}同级加入：
+
 具体强制使用annotations的哪个版本，根据异常中test app (27.1.1)的版本号定
 
 	configurations.all {
