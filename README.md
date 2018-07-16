@@ -63,12 +63,12 @@
 - 一般网络请求：
 	**OkNetUtils.executeNetRequest(...)**
 
-![image](https://github.com/Charay/OkNetutils/blob/master/images/commonrequest.png)
+![](https://i.imgur.com/Z5NWEOY.png)
 
  - 多文件上传网络请求
  
 	**OkNetUtils.executeMultiUploadRequest(...)**
  
-![images](https://github.com/Charay/OkNetutils/blob/master/images/multirequest.png)
+![](https://i.imgur.com/EUpnjd4.png)
 
 
